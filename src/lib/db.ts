@@ -227,7 +227,6 @@ function loadStore() {
     store = JSON.parse(fs.readFileSync(filePath, "utf8")) as Store;
   } catch {
     store = seedStore();
-    saveStore();
   }
 
   return store;
@@ -239,8 +238,12 @@ function saveStore() {
   }
 
   const filePath = storePath();
-  fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, JSON.stringify(store, null, 2));
+  try {
+    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+    fs.writeFileSync(filePath, JSON.stringify(store, null, 2));
+  } catch (error) {
+    console.warn("Could not persist startup memory store", error);
+  }
 }
 
 export function getUsers() {
