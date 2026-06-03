@@ -27,6 +27,7 @@ node_modules/
 vendor/
 
 # Build and cache output
+.next/
 dist/
 build/
 out/
@@ -48,3 +49,8 @@ venv/
 *.tar.gz
 *.tgz
 *.rar
+
+# Local application data
+data/*.db
+data/*.db-shm
+data/*.db-wal

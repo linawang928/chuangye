@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  DATABASE_PATH = "/tmp/startup-memory.db"
