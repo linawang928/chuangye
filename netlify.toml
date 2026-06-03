@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  DATABASE_PATH = "/tmp/startup-memory.db"
+  DATABASE_PATH = "/tmp/startup-memory.json"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

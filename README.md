@@ -12,7 +12,7 @@
 - 可视化仪表盘：记录趋势、信心曲线、标签分布、项目活跃度
 - 知识图谱：自动从日志生成节点与关系，也支持手动新增节点/关系
 - Agent 智能体：按当前数据范围检索历史记录、决策和图谱节点并回答
-- 本地数据库：默认使用 SQLite，后续可替换为 Supabase/PostgreSQL
+- 本地数据文件：默认使用 JSON 文件，后续可替换为 Supabase/PostgreSQL
 
 ## 本地启动
 
@@ -45,10 +45,10 @@ OPENAI_TRANSCRIBE_MODEL=gpt-4o-mini-transcribe
 
 ## 数据文件
 
-默认数据库路径：
+默认数据文件路径：
 
 ```bash
-./data/startup-memory.db
+./data/startup-memory.json
 ```
 
 该文件由应用自动创建，并带有少量种子数据。
